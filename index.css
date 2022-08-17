@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+header {
+    margin: 10px;
+}
+
+.waiting {
+    color: orangered;
+}
+
+.container {
+    text-align: center;
+}
+
+.padding-border {
+    margin: 15px 0 15px 0;
+    border: 1px solid #053059;
+    border-radius: 10px;
+    padding: 2vw;
+    min-width: 20%;
+}
+
+.container div {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+input {
+    text-align: center;
+    height: 6vh;
+    margin-bottom: 1rem;
+    color: #053059;
+}
+
+input:nth-child(1) {
+    margin-top: 1em;
+}
+
+.btn-save {
+    font-weight: 700;
+    padding: 12px 0px 12px 0px;
+    color: white;
+    background-color: #053059;
+    margin-bottom: 2em;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.btn-save:hover {
+    background-color: #0b569d;
+    transition: 1s;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/*
+    linha
+*/
+
+.line {
+    border-bottom: 1px solid rgb(217, 217, 217);
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+/*
+    saida dos dados
+*/
+
+.resultado {
+    margin: 0 5px 0 5px;
+}
+
+table, th, td {
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #0b569d;
+    text-align: center;
+}
+
+
+table {
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .padding-border {
+        margin: 15px 0 15px 0;
+        border: 1px solid #053059;
+        border-radius: 10px;
+        padding: 2vw;
+        min-width: 80%;
+    }
+}
