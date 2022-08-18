@@ -18,6 +18,7 @@ class Reservation {
   listTable() {
     let tableResult                 = document.querySelector('.table-result');
     tableResult.innerText           = '';
+    this.wait++
 
     for(let i = 0; i < this.arrayPerson.length; i++) {
       let tr                       = tableResult.insertRow();
@@ -33,7 +34,7 @@ class Reservation {
       td_destination.innerText     = this.arrayPerson[i].destinationTable;
       td_destination.style.color   = 'red';
 
-    function createButton( indexDaLinha ) {
+    function createButton(indexDaLinha) {
       let btn = document.createElement('BUTTON');
       btn.style.backgroundColor    = 'red';
       btn.style.color              = 'white';
@@ -51,18 +52,18 @@ class Reservation {
         td_destination.innerText    = info;
         td_destination.style.color  = 'Green';
         function createButtonTwo() {
-          let btn = document.createElement('BUTTON');
+          let btn = document.createElement('p');
           let lbl = document.createTextNode("concluido");
           btn.style.backgroundColor = 'green';
           btn.style.color           = 'white';
           btn.style.padding         = '4px';
           btn.style.border          = '1px solid transparent';
-          btn.style.borderRadius    = '10px';      
+          btn.style.borderRadius    = '10px';  
           btn.appendChild(lbl);
   
           btn.onclick = function()
           {
-            'Tudo certo'
+            
           }
           td_action.appendChild(btn);
         }
@@ -71,15 +72,13 @@ class Reservation {
       td_action.appendChild(btn);
 }
 
-createButton( i );
+createButton(i);
 
     }
   }
 
   addDatareserve(reserve) {
-    
     this.arrayPerson.push(reserve);
-    reserve.waiting.innerHTML   = this.wait;
   }
 
   readData() {
@@ -104,7 +103,7 @@ createButton( i );
       reserve.password          === ""
     ) 
     {
-      msg                       += "- preenche os dados corretamente! \n";
+      msg                       += "- preencha todos os campos corretamente!. \n";
     }
 
     if (msg !== "") {
